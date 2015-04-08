@@ -72,8 +72,8 @@ class ChurnModel(YhatModel):
         return response
 
 yh = Yhat(
-    "colin@yhathq.com", 
-    "bc2dda6e5a77d6fe879da4ccaa56b37f", 
+    "USERNAME", 
+    "API_KEY", 
     "http://cloud.yhathq.com/" 
 )
 
