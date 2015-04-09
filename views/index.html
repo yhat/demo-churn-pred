@@ -14,7 +14,112 @@
                     <div class="row">
                         <label for="account_length" class="col-sm-4 control-label">Account Length</label>
                         <div class="col-sm-8">
-                            <input type="number" class="form-control" id="account_length" min="0" max="1000" step="1" value="{{ account_length }}">
+                            <input type="number" class="form-control" id="account_length" min="1" max="243" step="1" value="{{ account_length }}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="area_code" class="col-sm-4 control-label">Area Code</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="area_code" min="408" max="510" step="1" value="{{ area_code }}">
+                        </div>
+                    </div>
+                       
+                   <div class="row">
+                       <label for="vmail_message" class="col-sm-4 control-label">VMail Message</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="vmail_message" min="0" max="51" step="1" value="{{ vmail_message }}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="day_mins" class="col-sm-4 control-label">Day Mins</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="day_mins" min="0" max="350" step="1" value="{{ day_mins }}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="day_calls" class="col-sm-4 control-label">Day Calls</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="day_calls" min="0" max="165" step="1" value="{{ day_calls }}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="day_charge" class="col-sm-4 control-label">Day Charge</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="day_charge" min="0" max="60" step="1" value="{{ day_charge }}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="eve_minutes" class="col-sm-4 control-label">Evening Minutes</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="eve_minutes" min="0" max="364" step=".1" value="{{ eve_minutes }}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="eve_calls" class="col-sm-4 control-label">Evening Calls</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="eve_calls" min="0" max="170" step="1"  value="{{ eve_calls }}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="eve_charge" class="col-sm-4 control-label">Evening Charge</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="eve_charge" min="0" max="31.9" step=".1" value="{{ eve_charge }}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="night_mins" class="col-sm-4 control-label">Night Minutes</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="night_mins" min="23.2" max="395" step=".1" value="{{ night_mins }}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="night_calls" class="col-sm-4 control-label">Night Calls</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="night_calls" min="33" max="175" step="1" value="{{ night_calls }}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="night_charge" class="col-sm-4 control-label">Night Charge</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="night_charge" min="1" max="17.7" step=".1" value="{{ night_charge }}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="intl_mins" class="col-sm-4 control-label">International Minutes</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="intl_mins" min="0" max="20" step=".1" value="{{ intl_mins }}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="intl_calls" class="col-sm-4 control-label">International Calls</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="intl_calls" min="0" max="20" step="1"  value="{{ intl_calls }}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="intl_charge" class="col-sm-4 control-label">International Charge</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="intl_charge" min="0" max="5.4" step=".1" value="{{ intl_charge }}">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="custserv_calls" class="col-sm-4 control-label">Customer Service Calls</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="custserv_calls" min="0" max="9" step="1" value="{{ custserv_calls }}">
                         </div>
                     </div>
 
@@ -88,9 +193,15 @@
             <!-- stuff the results here... -->
             <h3>Results</h3>
             <hr>
-            <h5>P(default)</h5>
+            <h5>P(Churn)</h5>
             <div class="progress">
                 <div id="pg-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; min-width: 20px;">
+                    <span class=""></span>
+                </div>
+            </div>
+            <h5>Expected Loss</h5>
+            <div class="progress">
+                <div id="pg-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="400" style="width: 0%; min-width: 20px;">
                     <span class=""></span>
                 </div>
             </div>
