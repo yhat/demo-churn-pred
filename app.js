@@ -15,35 +15,24 @@ yh = yhat.init(process.env.YHAT_USERNAME, process.env.YHAT_APIKEY, "http://cloud
 
 
 var examples = [
-  // high prob
   {
-      "last_fico_range_high" : 550,
-      "last_fico_range_low" : 495,
-      "revol_util" : 20,
-      "inq_last_6mths" : 1,
-      "home_ownership" : "MORTGAGE",
-      "annual_inc" : 75000,
-      "loan_amnt" : 6000
-  },
-  // med prob
-  {
-      "last_fico_range_high" : 650,
-      "last_fico_range_low" : 545,
-      "revol_util" : 60,
-      "inq_last_6mths" : 6,
-      "home_ownership" : "MORTGAGE",
-      "annual_inc" : 45000,
-      "loan_amnt" : 20000
-  },
-  // low prob
-  {
-      "last_fico_range_high" : 700,
-      "last_fico_range_low" : 645,
-      "revol_util" : 10,
-      "inq_last_6mths" : 1,
-      "home_ownership" : "MORTGAGE",
-      "annual_inc" : 75000,
-      "loan_amnt" : 15000
+    "account_length": 128,
+    "intl_plan": "no",
+    "vmail_plan": "yes",
+    "vmail_message": 25,
+    "day_mins": 265.1,
+    "day_calls": 110,
+    "day_charge": 45.07,
+    "eve_minutes": 197.4,
+    "eve_calls": 99,
+    "eve_charge": 16.78,
+    "night_mins": 244.7,
+    "night_calls": 91,
+    "night_charge": 11.01,
+    "intl_mins": 10,
+    "intl_calls": 3,
+    "intl_charge": 2.7,
+    "custserv_calls": 1
   }
 ]
 
@@ -91,7 +80,7 @@ app.configure('development', function(){
 * Route for Index
 */
 app.get('/', function(req, res) {
-  var idx = Math.floor(Math.random()*3);
+  var idx = Math.floor(Math.random()*1);
   res.render('index', { params: examples[idx] });
 });
 
