@@ -38,7 +38,7 @@ scaler = StandardScaler()
 X = scaler.fit_transform(X)
 
 print "Generating training data"
-train_index,test_index = train_test_split(churn_df.index)
+train_index, test_index = train_test_split(churn_df.index)
 
 # Write test data to file
 test_churn_df = churn_df.ix[test_index]
@@ -71,11 +71,7 @@ class ChurnModel(YhatModel):
         # Return response DataFrame
         return response
 
-yh = Yhat(
-    "USERNAME", 
-    "API_KEY", 
-    "http://cloud.yhathq.com/" 
-)
+yh = Yhat(raw_input("Yhat username: "), raw_input("Yhat apikey: "), "http://cloud.yhathq.com/")
 
 print "Deploying model"
 response = yh.deploy("PythonChurnModel",ChurnModel,globals())

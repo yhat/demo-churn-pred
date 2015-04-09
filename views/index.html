@@ -12,62 +12,74 @@
                     <!-- fields for the model -->
                     {{#params}}
                     <div class="row">
-                        <label for="last_fico_range_low" class="col-sm-4 control-label">Min FICO Score</label>
+                        <label for="account_length" class="col-sm-4 control-label">Account Length</label>
                         <div class="col-sm-8">
-                            <input type="number" class="form-control" id="last_fico_range_low" min="95" max="845" step="50" value="{{ last_fico_range_low }}">
+                            <input type="number" class="form-control" id="account_length" min="0" max="1000" step="1" value="{{ account_length }}">
                         </div>
                     </div>
 
                     <div class="row">
-                        <label for="last_fico_range_high" class="col-sm-4 control-label">Max FICO Score</label>
+                        <label for="state" class="col-sm-4 control-label">State</label>
                         <div class="col-sm-8">
-                            <input type="number" class="form-control" id="last_fico_range_high" min="100" max="850" step="50" value="{{ last_fico_range_high}}">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <label for="revol_util" class="col-sm-4 control-label">Revolving Line Utilization</label>
-                        <div class="col-sm-8">
-                            <input type="number" class="form-control" id="revol_util" min="0" max="100" step="10" value="{{ revol_util }}">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <label for="inq_last_6mths" class="col-sm-4 control-label">Credit Inquiries Past 6m</label>
-                        <div class="col-sm-8">
-                            <input type="number" class="form-control" id="inq_last_6mths" min="0" max="10" value="{{ inq_last_6mths }}">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <label for="home_ownership" class="col-sm-4 control-label">Home Onwership</label>
-                        <div class="col-sm-8">
-                            <select id="home_ownership" class="form-control">
-                                <option>RENT</option>
-                                <option>OWN</option>
-                                <option>MORTGAGE</option>
+                            <select id="state" class="form-control">
+                                <option>AL</option>
+                                <option>AK</option>
+                                <option>AZ</option>
+                                <option>AR</option>
+                                <option>CA</option>
+                                <option>CO</option>
+                                <option>CT</option>
+                                <option>DE</option>
+                                <option>FL</option>
+                                <option>GA</option>
+                                <option>HI</option>
+                                <option>ID</option>
+                                <option>IL</option>
+                                <option>IN</option>
+                                <option>IA</option>
+                                <option>KS</option>
+                                <option>KY</option>
+                                <option>LA</option>
+                                <option>ME</option>
+                                <option>MD</option>
+                                <option>MA</option>
+                                <option>MI</option>
+                                <option>MN</option>
+                                <option>MS</option>
+                                <option>MO</option>
+                                <option>MT</option>
+                                <option>NE</option>
+                                <option>NV</option>
+                                <option>NH</option>
+                                <option>NJ</option>
+                                <option>NM</option>
+                                <option>NY</option>
+                                <option>NC</option>
+                                <option>ND</option>
+                                <option>OH</option>
+                                <option>OK</option>
+                                <option>OR</option>
+                                <option>PA</option>
+                                <option>RI</option>
+                                <option>SC</option>
+                                <option>SD</option>
+                                <option>TN</option>
+                                <option>TX</option>
+                                <option>UT</option>
+                                <option>VT</option>
+                                <option>VA</option>
+                                <option>WA</option>
+                                <option>WV</option>
+                                <option>WI</option>
+                                <option>WY</option>
                             </select>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <label for="annual_inc" class="col-sm-4 control-label">Annual Income</label>
-                        <div class="col-sm-8">
-                            <input type="number" class="form-control" id="annual_inc" min="10000" max="1000000" step="5000" value="{{ annual_inc }}" >
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <label for="loan_amnt" class="col-sm-4 control-label">Loan Amount</label>
-                        <div class="col-sm-8">
-                            <input type="number" class="form-control" id="loan_amnt" min="1000" max="35000" step="1000" value="{{ loan_amnt }}">
                         </div>
                     </div>
                     {{/params}}
                 </div>
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                  <button type="number" class="btn btn-default btn-block">Calculate Risk</button>
+                  <button type="number" class="btn btn-default btn-block">Calculate Price</button>
                 </div>
               </div>
             </form>
