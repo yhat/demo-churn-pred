@@ -96,7 +96,7 @@ app.get('/', function(req, res) {
 
 app.post('/', function(req, res) {
   data = req.body;
-  yh.predict("LendingClub", data, function(err, result) {
+  yh.predict("PythonChurnModel", data, function(err, result) {
     res.send(result);
   });
 });
