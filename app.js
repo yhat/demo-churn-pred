@@ -7,6 +7,7 @@ var express = require('express'),
   http = require('http'),
   exphbs = require('express3-handlebars'),
   lessMiddleware = require('less-middleware'),
+  _ = require("underscore"),
   yhat = require('yhat');
 
 
@@ -96,7 +97,10 @@ app.get('/', function(req, res) {
 
 app.post('/', function(req, res) {
   data = req.body;
-  yh.predict("LendingClub", data, function(err, result) {
+  _.map(_.keys(data), function(k) {
+    data[k] = [data[k]];
+  });
+  yh.predict("PythonChurnModel", data, function(err, result) {
     res.send(result);
   });
 });
