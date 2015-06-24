@@ -83,7 +83,7 @@ class ChurnModel(YhatModel):
         # Return response DataFrame
         return response
 
-yh = Yhat(raw_input("Yhat username: "), raw_input("Yhat apikey: "), "http://cloud.yhathq.com/")
+yh = Yhat(raw_input("Yhat username: "), raw_input("Yhat apikey: "), "http://sandbox.yhathq.com/")
 
 print "Deploying model"
 response = yh.deploy("PythonChurnModel",ChurnModel,globals())
